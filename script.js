@@ -175,6 +175,8 @@ function calculatePercentWhenPushEqual(x, operation, n) {
 		total = x - (n / 100 * x)
 	} else if (operation === '*') {
 		total = x * (n / 100)
+	} else if (operation === '/') {
+		total = x / (n / 100)
 	}
 	return total
 }
@@ -205,7 +207,7 @@ function calculatePercentWhenPushEqual(x, operation, n) {
 // Если нажали %
 // n / 100 // 10 / 10 => 10 / (10 / 100) = 0.1
 // Нажали %, затем =
-// x / (n * 100) // 10 / 10 => 10 / (10 * 100 / 10) = 100
+// x / (n * 100) // 10 / 10 => 10 / (10 / 100) = 100
 
 // Переключение темы калькулятора Светлая / Темная
 const theme = document.querySelector('.theme');
