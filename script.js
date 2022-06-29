@@ -30,11 +30,11 @@ function operationTypeHandling (data) {
 		tempNumber = tempNumber === '0' ? data : tempNumber + data
 	} else if (data === 'float') {
 		operationType = 'number';
-		if (!/\./.test(tempNumber)) {
+		if (!/\,/.test(tempNumber)) {
 			if (tempNumber) {
-				tempNumber = tempNumber + '.'
+				tempNumber = tempNumber + ','
 			} else {
-				tempNumber = '0.'
+				tempNumber = '0,'
 			}
 		}
 	} else if (data === 'delete' && operationType === 'number') {
